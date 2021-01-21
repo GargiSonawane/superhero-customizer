@@ -134,4 +134,36 @@ function my_keydown(e){
         newImage("thor_right_hand.png");
         console.log("p");
     }
+}
+function up(){
+    if(player_y >= 0){
+        player_y = player_y - block_height;
+        console.log(player_x + ", " + player_y);
+        canvas.remove(player_object);
+        playerUpdate();
+    }
+}
+function down(){
+    if(player_y <= 500){
+        player_y = player_y + block_height;
+        console.log(player_x + ", " + player_y);
+        canvas.remove(player_object);
+        playerUpdate();
+    }
+}
+function left(){
+    if(player_x >= 0){
+        player_x = player_x - block_width;
+        console.log(player_x + ", " + player_y);
+        canvas.remove(player_object);
+        playerUpdate();
+    }
+}
+function right(){
+    if(player_x <= 850){
+        player_x = player_x + block_width;
+        console.log(player_x + ", " + player_y);
+        canvas.remove(player_object);
+        playerUpdate();
+    }
 }    
